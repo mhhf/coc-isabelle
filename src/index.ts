@@ -18,7 +18,7 @@ let last_caret_update: protocol.Caret_Update = {}
 
 export async function activate(context: ExtensionContext): Promise<void> {
 
-  const isabelle_tool = "/nix/store/fl4hfnj6rmzns7bzgds970jwkjsvsbvp-isabelle-2020/bin/isabelle";
+  const isabelle_tool = process.env.ISABELLE_HOME + "/bin/isabelle";
 
   const standard_args = ["-o", "vscode_unicode_symbols", "-o", "vscode_pide_extensions"]
   const server_options: ServerOptions = { command: isabelle_tool,
