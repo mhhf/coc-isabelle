@@ -44,7 +44,7 @@
     "webpack-cli": "^3.3.12"
   },
   "activationEvents": [
-    "*"
+    "onLanguage:isabelle"
   ],
   "contributes": {
     "configuration": {
